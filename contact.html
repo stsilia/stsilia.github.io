@@ -48,17 +48,16 @@
 
 
 <script>
-  // Wait until DOM is ready
   document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("page-content");
 
     if (content) {
-      // Use requestAnimationFrame to ensure it's triggered after first paint
-      requestAnimationFrame(() => {
+      // Slight delay to ensure fade-in is triggered visually
+      setTimeout(() => {
         content.classList.add("fade-in");
-      });
+      }, 20); // 20ms delay works better than requestAnimationFrame in this case
 
-      // Intercept internal link clicks for fade-out
+      // Fade out before navigating
       document.querySelectorAll("a[href]").forEach(link => {
         const url = new URL(link.href);
         const isInternal = location.host === url.host;
@@ -72,7 +71,7 @@
 
             setTimeout(() => {
               window.location.href = href;
-            }, 300); // matches CSS transition duration
+            }, 300); // match your fade duration
           });
         }
       });
