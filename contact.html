@@ -6,10 +6,9 @@
   <title>Styliani Tsilia | Contact</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
-  
 <body>
 
+  <!-- Header Area -->
   <section class="hero">
     <img src="assets/profile.jpg" alt="Profile photo" class="hero-photo" />
     <h1>Styliani (Stella) Tsilia</h1>
@@ -33,7 +32,7 @@
     </nav>
   </header>
 
-  <!-- Content -->
+  <!-- Contact Content -->
   <main id="page-content">
     <section>
       <h2>Contact Me</h2>
@@ -43,11 +42,44 @@
       <p>Or connect with me on LinkedIn / Twitter / GitHub — links to come!</p>
     </section>
   </main> 
-  
+
   <footer>
     <p>© Styliani Tsilia</p>
   </footer>
 
-  
+  <!-- Fade-in/out Script -->
+  <script>
+    // Wait until DOM is ready
+    document.addEventListener("DOMContentLoaded", () => {
+      const content = document.getElementById("page-content");
+
+      if (content) {
+        // Use requestAnimationFrame to ensure it's triggered after first paint
+        requestAnimationFrame(() => {
+          content.classList.add("fade-in");
+        });
+
+        // Intercept internal link clicks for fade-out
+        document.querySelectorAll("a[href]").forEach(link => {
+          const url = new URL(link.href);
+          const isInternal = location.host === url.host;
+
+          if (isInternal) {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const href = this.getAttribute("href");
+
+              content.classList.remove("fade-in");
+
+              setTimeout(() => {
+                window.location.href = href;
+              }, 300); // matches CSS transition duration
+            });
+          }
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
