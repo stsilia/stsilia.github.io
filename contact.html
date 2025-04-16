@@ -7,40 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const content = document.getElementById("page-content");
-
-    if (content) {
-      // Force reflow to guarantee transition
-      void content.offsetWidth;
-
-      setTimeout(() => {
-        content.classList.add("fade-in");
-      }, 10); // short delay ensures DOM is painted first
-
-      document.querySelectorAll("a[href]").forEach(link => {
-        const url = new URL(link.href);
-        const isInternal = location.host === url.host;
-
-        if (isInternal) {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const href = this.getAttribute("href");
-
-            content.classList.remove("fade-in");
-
-            setTimeout(() => {
-              window.location.href = href;
-            }, 300);
-          });
-        }
-      });
-    }
-  });
-</script>
-
   
 <body>
 
