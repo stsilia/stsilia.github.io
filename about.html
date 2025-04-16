@@ -58,27 +58,31 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("page-content");
+
     if (content) {
+      // Fade in content after page loads
       content.classList.add("fade-in");
+
+      // Intercept internal link clicks
+      document.querySelectorAll("a[href]").forEach(link => {
+        const url = new URL(link.href);
+        const isInternal = location.host === url.host;
+
+        if (isInternal) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            // Fade out content before navigation
+            content.classList.remove("fade-in");
+
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300); // matches fade duration
+          });
+        }
+      });
     }
-
-    document.querySelectorAll("a[href]").forEach(link => {
-      const url = new URL(link.href);
-      const isInternal = location.host === url.host;
-
-      if (isInternal) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const href = this.getAttribute("href");
-
-          if (content) content.classList.remove("fade-in");
-
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
-        });
-      }
-    });
   });
 </script>
   
