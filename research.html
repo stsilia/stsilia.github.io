@@ -45,16 +45,17 @@
   </footer>
 
 <script>
+  // Wait until DOM is ready
   document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("page-content");
 
     if (content) {
-      // fade in content after page load
+      // Use requestAnimationFrame to ensure it's triggered after first paint
       requestAnimationFrame(() => {
         content.classList.add("fade-in");
       });
 
-      // handle internal nav fade out
+      // Intercept internal link clicks for fade-out
       document.querySelectorAll("a[href]").forEach(link => {
         const url = new URL(link.href);
         const isInternal = location.host === url.host;
@@ -68,7 +69,7 @@
 
             setTimeout(() => {
               window.location.href = href;
-            }, 300);
+            }, 300); // matches CSS transition duration
           });
         }
       });
