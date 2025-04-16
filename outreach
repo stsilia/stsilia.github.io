@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styliani Tsilia | Outreach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <img src="assets/profile.jpg" alt="Profile photo" class="hero-photo" />
+    <h1>Styliani (Stella) Tsilia</h1>
+    <p class="tagline">PhD student in Astrophysics</p>
+  </section>
+
+  <header>
+    <nav>
+      <hr />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="volunteering.html">Volunteering</a></li>
+        <li><a href="freebies.html">Freebies</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Outreach</h2>
+    <p>
+      I enjoy sharing the wonders of astronomy with the public. This section will highlight some of my talks, events, and public engagement activities — including resources and recordings when available.
+    </p>
+  </section>
+
+  <footer>
+    <p>© Styliani Tsilia</p>
+  </footer>
+
+</body>
+</html>
