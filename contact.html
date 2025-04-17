@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Styliani Tsilia | Contact</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for LinkedIn icon -->
+  <!-- Font Awesome for LinkedIn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-nbcP4MjzHfG4Q4EzjJLm69gFYhIVhbd6YOowquTQ4eXraHzcst5TLlZTUzK36pRf9ZJ7E7Q2JKpVcIPbgl+Y5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -37,40 +38,15 @@
   <main id="page-content">
     <section>
       <h2>Contact Me</h2>
+      <p>You can reach me directly at: <a href="mailto:stsilia@iac.es">stsilia@iac.es</a></p>
 
-      <p>Connect with me on LinkedIn:  
-        <a href="https://www.linkedin.com/in/styliani-tsilia/" target="_blank" aria-label="LinkedIn" style="font-size: 1.2rem;">
+      <p>Or connect with me on LinkedIn:  
+        <a href="https://www.linkedin.com/in/styliani-tsilia/" target="_blank" aria-label="LinkedIn" style="font-size: 1.3rem;">
           <i class="fab fa-linkedin"></i>
         </a>
       </p>
 
-      <p>You can reach me directly at: <a href="mailto:stsilia@iac.es">stsilia@iac.es</a> or through the form below.</p>
-
-      <!-- Contact Form -->
-<!-- Contact Form Section -->
-<form action="https://formspree.io/f/mwpljdwg" method="POST" class="contact-form">
-  <div class="form-group">
-    <input type="text" name="name" required />
-    <label>Name</label>
-  </div>
-
-  <div class="form-group">
-    <input type="email" name="_replyto" required />
-    <label>E-mail</label>
-  </div>
-
-  <div class="form-group">
-    <input type="text" name="subject" />
-    <label>Subject</label>
-  </div>
-
-  <div class="form-group">
-    <textarea name="message" rows="5" required></textarea>
-    <label>Message</label>
-  </div>
-
-  <button type="submit" class="submit-button">Send</button>
-</form>
+      
     </section>
   </main>
 
@@ -79,35 +55,36 @@
     <p>© Styliani Tsilia</p>
   </footer>
 
-  <!-- Fade Script -->
+  <!-- Fade + Submit Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const content = document.getElementById("page-content");
-
       if (content) {
-        requestAnimationFrame(() => {
-          content.classList.add("fade-in");
-        });
+        requestAnimationFrame(() => content.classList.add("fade-in"));
 
         document.querySelectorAll("a[href]").forEach(link => {
           const url = new URL(link.href);
-          const isInternal = location.host === url.host;
-
-          if (isInternal) {
+          if (location.host === url.host) {
             link.addEventListener("click", function (e) {
               e.preventDefault();
               const href = this.getAttribute("href");
-
               content.classList.remove("fade-in");
-
-              setTimeout(() => {
-                window.location.href = href;
-              }, 300);
+              setTimeout(() => (window.location.href = href), 300);
             });
           }
         });
       }
     });
+
+    function submitForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const thankYou = document.getElementById("thankYouMessage");
+
+      // Simulate "successful" submission for GitHub Pages (no backend)
+      form.style.display = "none";
+      thankYou.style.display = "block";
+    }
   </script>
 
 </body>
