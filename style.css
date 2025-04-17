@@ -204,3 +204,8 @@ footer {
 }
   font-size: 1.5rem;
 }
+
+.label-icon {
+  margin-right: 0.5rem;
+  color: #73baf7;
+}
