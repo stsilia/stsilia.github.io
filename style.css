@@ -201,3 +201,35 @@ footer {
   margin: 0 auto;
   max-width: 600px; /* optional: keeps it from stretching too wide */
 }
+
+.freebie-resource {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.freebie-description {
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.freebie-description h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #73baf7;
+}
+
+.freebie-description a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.freebie-preview {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
