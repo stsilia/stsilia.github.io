@@ -195,3 +195,9 @@ footer {
   margin-right: 0.5rem;
   color: #FFFFFF;
 }
+
+.left-aligned-list {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px; /* optional: keeps it from stretching too wide */
+}
