@@ -223,10 +223,11 @@ footer {
   color: #FFFFFF;
 }
 
-.freebie-description a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
+.freebie-description {
+  flex: 1 1 300px;
+  max-width: 500px;
+  min-width: 300px; /* ✅ Add this */
+  text-align: left;
 }
 
 .freebie-preview {
