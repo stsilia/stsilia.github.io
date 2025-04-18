@@ -239,71 +239,41 @@ footer {
   white-space: nowrap;
 }
 
-/* Add to your style.css */
 .timeline {
   position: relative;
+  max-width: 1000px;
   margin: 4rem auto;
   padding: 2rem 1rem;
-  max-width: 900px;
+  border-top: 4px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
 }
 
-.timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: #ffffff;
-  z-index: 1;
-}
-
-.timeline-item {
-  position: relative;
-  width: 33.333%;
-  float: left;
+.timeline-event {
   text-align: center;
+  flex: 1;
+  position: relative;
   padding-top: 2rem;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  top: -1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #0d1b2a;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
   z-index: 2;
 }
 
-.timeline-item .circle {
-  width: 20px;
-  height: 20px;
-  background: #0d1b2a;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
-}
-
-.timeline-item .content {
+.timeline-event h4 {
   margin-top: 1rem;
-  color: #e0e6ed;
-}
-
-.timeline-item h4 {
+  font-size: 1.1rem;
   color: #73baf7;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.timeline-item p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* Responsive fallback */
-@media (max-width: 768px) {
-  .timeline-item {
-    width: 100%;
-    float: none;
-    margin-bottom: 2rem;
-  }
-
-  .timeline-line {
-    top: auto;
-    bottom: 0;
-    height: 0;
-  }
 }
