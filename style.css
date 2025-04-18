@@ -239,44 +239,45 @@ footer {
   white-space: nowrap;
 }
 
-.timeline-section {
+.timeline-wrapper {
   position: relative;
   max-width: 1000px;
   margin: 5rem auto;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .timeline-line {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100%;
   height: 4px;
-  background: #fff;
+  width: 100%;
+  background-color: #ffffff;
   z-index: 1;
 }
 
 .timeline-item {
   position: relative;
   width: 50%;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .timeline-item .timeline-content {
   background: transparent;
   color: #e0e6ed;
-  padding: 0.5rem;
-  max-width: 350px;
+  padding: 1rem;
+  max-width: 360px;
   margin: 0 auto;
   z-index: 2;
+  text-align: center;
 }
 
 .timeline-marker {
   width: 24px;
   height: 24px;
-  background-color: #0d1b2a;
-  border: 3px solid #fff;
+  background: #0d1b2a;
+  border: 3px solid #ffffff;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -284,22 +285,21 @@ footer {
   z-index: 3;
 }
 
-/* Vertical connectors */
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 50%;
   width: 3px;
   height: 2rem;
-  background-color: #fff;
+  background: #ffffff;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
-/* Top events */
+/* Top-positioned items */
 .timeline-item.top {
+  position: absolute;
   top: 0;
-  transform: translateY(-100%);
 }
 
 .timeline-item.top .timeline-marker {
@@ -310,10 +310,10 @@ footer {
   bottom: 0;
 }
 
-/* Bottom events */
+/* Bottom-positioned items */
 .timeline-item.bottom {
+  position: absolute;
   bottom: 0;
-  transform: translateY(100%);
 }
 
 .timeline-item.bottom .timeline-marker {
@@ -324,18 +324,41 @@ footer {
   top: 0;
 }
 
-/* Responsive stacking for mobile */
-@media screen and (max-width: 768px) {
-  .timeline-item {
-    width: 100%;
-    transform: none !important;
-    margin: 3rem 0;
+/* Position items horizontally */
+.timeline-item:nth-child(2) {
+  left: 10%;
+}
+
+.timeline-item:nth-child(3) {
+  left: 35%;
+}
+
+.timeline-item:nth-child(4) {
+  left: 60%;
+}
+
+.timeline-item:nth-child(5) {
+  left: 85%;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .timeline-line {
     top: unset;
     bottom: 0;
-    height: 4px;
+  }
+
+  .timeline-item {
+    position: static;
+    width: 100%;
+    transform: none !important;
+    text-align: center;
   }
 
   .timeline-item::before {
@@ -344,7 +367,6 @@ footer {
 
   .timeline-marker {
     position: relative;
-    top: 0;
     margin: 1rem auto;
   }
 }
