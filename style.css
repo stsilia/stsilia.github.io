@@ -226,7 +226,7 @@ footer {
 .freebie-description {
   flex: 1 1 300px;
   max-width: 500px;
-  min-width: 300px; /* ✅ Add this */
+  min-width: 300px; 
   text-align: left;
 }
 
@@ -237,87 +237,4 @@ footer {
 
 .no-break {
   white-space: nowrap;
-}
-
-.timeline-wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 5rem auto;
-  padding: 8rem 1rem;
-  height: 600px;
-  overflow: hidden;
-}
-
-/* Horizontal center line */
-.timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #ffffff;
-  z-index: 1;
-}
-
-/* Base styling for timeline items */
-.timeline-item {
-  position: absolute;
-  width: 260px;
-  text-align: center;
-  z-index: 2;
-  transform: translateX(-50%);
-}
-
-.timeline-content {
-  color: #e0e6ed;
-  font-size: 1rem;
-}
-
-/* Marker circle */
-.timeline-marker {
-  width: 24px;
-  height: 24px;
-  background: #0d1b2a;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-}
-
-/* Connector line (short vertical line) */
-.timeline-connector {
-  width: 3px;
-  height: 40px;
-  background-color: #ffffff;
-  margin: 0 auto;
-}
-
-/* Top item: text -> marker -> connector */
-.timeline-item.top {
-  top: 0;
-}
-
-.timeline-item.top .timeline-content {
-  margin-bottom: 1rem;
-}
-
-.timeline-item.top .timeline-connector {
-  margin-top: 0.5rem;
-}
-
-/* Bottom item: connector -> marker -> text */
-.timeline-item.bottom {
-  bottom: 0;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
-.timeline-item.bottom .timeline-content {
-  margin-top: 1rem;
-}
-
-.timeline-item.bottom .timeline-connector {
-  margin-bottom: 0.5rem;
 }
