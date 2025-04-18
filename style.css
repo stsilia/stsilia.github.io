@@ -239,41 +239,112 @@ footer {
   white-space: nowrap;
 }
 
-.timeline {
+.timeline-section {
   position: relative;
   max-width: 1000px;
-  margin: 4rem auto;
+  margin: 5rem auto;
   padding: 2rem 1rem;
-  border-top: 4px solid #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow-x: auto;
 }
 
-.timeline-event {
-  text-align: center;
-  flex: 1;
-  position: relative;
-  padding-top: 2rem;
-}
-
-.timeline-event::before {
-  content: '';
+.timeline-line {
   position: absolute;
-  top: -1.1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 24px;
-  height: 24px;
-  background-color: #0d1b2a;
-  border: 3px solid #ffffff;
-  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.timeline-item .timeline-content {
+  background: transparent;
+  color: #e0e6ed;
+  padding: 0.5rem;
+  max-width: 350px;
+  margin: 0 auto;
   z-index: 2;
 }
 
-.timeline-event h4 {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #73baf7;
+.timeline-marker {
+  width: 24px;
+  height: 24px;
+  background-color: #0d1b2a;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Vertical connectors */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 2rem;
+  background-color: #fff;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Top events */
+.timeline-item.top {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.timeline-item.top .timeline-marker {
+  bottom: -12px;
+}
+
+.timeline-item.top::before {
+  bottom: 0;
+}
+
+/* Bottom events */
+.timeline-item.bottom {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.timeline-item.bottom .timeline-marker {
+  top: -12px;
+}
+
+.timeline-item.bottom::before {
+  top: 0;
+}
+
+/* Responsive stacking for mobile */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    transform: none !important;
+    margin: 3rem 0;
+  }
+
+  .timeline-line {
+    top: unset;
+    bottom: 0;
+    height: 4px;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-marker {
+    position: relative;
+    top: 0;
+    margin: 1rem auto;
+  }
 }
