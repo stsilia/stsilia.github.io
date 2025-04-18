@@ -233,3 +233,7 @@ footer {
   flex: 1 1 400px;
   max-width: 500px;
 }
+
+.no-break {
+  white-space: nowrap;
+}
