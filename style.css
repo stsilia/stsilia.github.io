@@ -249,8 +249,8 @@ footer {
 }
 
 .featured-grid a img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 6px;
   transition: transform 0.3s ease;
