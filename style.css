@@ -261,17 +261,30 @@ footer {
 }
 
 /* Tooltip Styles */
-.tooltip .tooltiptext {
-  bottom: 100%;
-  opacity: 0;
-  transform: translate(-50%, 10px);
-  transition: all 0.3s ease;
+.tooltip {
+  position: relative;
+  display: inline-block;
 }
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #1e293b;
+  color: #e0e6ed;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 120%; /* above the thumbnail */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 
-
-.tooltip .tooltiptext strong {
-  display: block;
-  margin-bottom: 4px;
-  color: #73baf7;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
