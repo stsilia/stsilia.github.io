@@ -242,20 +242,55 @@ footer {
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1rem; /* reduced from 2rem for tighter layout */
   justify-items: center;
-  align-items: center;
-  margin-top: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
 }
 
 .featured-grid a img {
-  width: 100px;
-  height: auto;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* ensures square layout */
+  object-fit: cover;
+  border-radius: 8px;
   transition: transform 0.3s ease;
-  border-radius: 6px;
 }
 
-.featured-grid a img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+.featured-grid a:hover img {
+  transform: scale(1.05);
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #1e293b;
+  color: #e0e6ed;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
