@@ -271,17 +271,17 @@ footer {
   background-color: #1e293b;
   color: #e0e6ed;
   text-align: center;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   position: absolute;
-  bottom: 110%;
+  bottom: 120%; /* above the thumbnail */
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
 .tooltip:hover .tooltiptext {
@@ -289,8 +289,3 @@ footer {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
