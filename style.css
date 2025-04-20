@@ -268,8 +268,10 @@ footer {
   transition: all 0.3s ease;
 }
 
-.tooltip:hover .tooltiptext {
-  opacity: 1;
-  transform: translate(-50%, -5px);
-}
 
+
+.tooltip .tooltiptext strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #73baf7;
+}
