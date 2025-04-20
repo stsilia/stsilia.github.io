@@ -244,7 +244,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem; /* reduced from 2rem for tighter layout */
   justify-items: center;
-  max-width: 900px;
+  max-width: 750px;
   margin: 2rem auto;
 }
 
