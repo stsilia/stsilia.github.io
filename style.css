@@ -239,3 +239,23 @@ footer {
   white-space: nowrap;
 }
 
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.featured-grid a img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.featured-grid a img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
