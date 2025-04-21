@@ -260,6 +260,10 @@ footer {
   transform: scale(1.05);
 }
 
+.center-row {
+  justify-content: center; /* ensures row of 3 is centered */
+}
+
 /* Tooltip Styles */
 .tooltip {
   position: relative;
