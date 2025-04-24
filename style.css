@@ -358,6 +358,10 @@ footer {
   text-decoration: none;
 }
 
+.orcid-box a:hover {
+  text-decoration: underline;
+}
+
 .logo-inline-wrapper {
   display: flex;
   align-items: flex-start;
@@ -374,6 +378,7 @@ footer {
   flex-shrink: 0;
 }
 
-.orcid-box a:hover {
-  text-decoration: underline;
+.logo-inline-wrapper p {
+  margin: 0;
+  line-height: 1.6;
 }
