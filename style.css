@@ -386,3 +386,16 @@ footer {
   margin: 0;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .logo-inline-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem; /* smaller gap for vertical stacking */
+  }
+
+  .logo-inline-wrapper p {
+    margin-top: 0.5rem;
+  }
+}
