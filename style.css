@@ -358,6 +358,22 @@ footer {
   text-decoration: none;
 }
 
+.logo-inline-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+}
+
+.logo-inline-wrapper img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e6ed;
+  flex-shrink: 0;
+}
+
 .orcid-box a:hover {
   text-decoration: underline;
 }
