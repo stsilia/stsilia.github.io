@@ -399,7 +399,3 @@ footer {
     margin-top: 0.5rem;
   }
 }
-
-.logo-inline-wrapper + p + p + h3 {
-  margin-top: 1rem; /* Adjust this if you want more or less spacing */
-}
