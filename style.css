@@ -364,14 +364,18 @@ footer {
 
 .logo-inline-wrapper {
   display: flex;
-  align-items: center; /* vertically centers logo to entire paragraph */
+  align-items: center; /* centers logo relative to the paragraph */
   gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0 2rem 0; /* match your usual paragraph spacing */
+}
+
+.logo-inline-wrapper:first-of-type {
+  margin-top: 0; /* removes any extra spacing right below <h3> */
 }
 
 .logo-inline-wrapper img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #e0e6ed;
