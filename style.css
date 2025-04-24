@@ -401,5 +401,5 @@ footer {
 }
 
 .logo-inline-wrapper + p + p + h3 {
-  margin-top: 2.5rem; /* Adjust this if you want more or less spacing */
+  margin-top: 1rem; /* Adjust this if you want more or less spacing */
 }
