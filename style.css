@@ -399,3 +399,37 @@ footer {
 h3 {
   margin-top: 2rem; /* creates consistent spacing between sections */
 }
+
+.cv-section {
+  text-align: left;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Merriweather', serif; /* Add to your <head> */
+}
+
+.cv-section h3 {
+  border-left: 4px solid #73baf7;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cv-entry {
+  margin-bottom: 1.5rem;
+}
+
+.cv-entry .date {
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+  color: #aab8d1;
+  display: inline-block;
+  width: 130px;
+}
+
+.cv-entry strong {
+  font-weight: 600;
+  color: #ffffff;
+}
