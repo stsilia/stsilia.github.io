@@ -409,13 +409,13 @@ h3 {
 }
 
 .cv-section h3 {
-  font-family: 'Georgia', serif;
+  font-family: 'Merriweather', serif;
   border-left: 4px solid #73baf7;
   padding-left: 1rem;
   font-size: 1.3rem;
   color: #ffffff;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .cv-entry {
