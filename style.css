@@ -250,6 +250,7 @@ footer {
   .freebie-preview {
     order: 2;
     margin-top: -0.5rem;
+    margin-bottom: 2rem;
   }
 
   .freebie-preview embed,
