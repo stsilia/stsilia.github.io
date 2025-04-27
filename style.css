@@ -198,40 +198,6 @@ footer {
   max-width: 600px; /* optional: keeps it from stretching too wide */
 }
 
-.freebie-resource {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 3rem;
-}
-
-.freebie-description {
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: left;
-}
-
-.freebie-description h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #FFFFFF;
-}
-
-.freebie-description {
-  flex: 1 1 300px;
-  max-width: 500px;
-  min-width: 300px; 
-  text-align: left;
-}
-
-.freebie-preview {
-  flex: 1 1 400px;
-  max-width: 500px;
-}
-
-/* Responsive behavior on small screens */
 @media (max-width: 768px) {
   .freebie-resource {
     flex-direction: column;
@@ -242,6 +208,15 @@ footer {
   .freebie-preview {
     max-width: 100%;
     text-align: center;
+  }
+
+  .freebie-description {
+    order: 1;
+  }
+
+  .freebie-preview {
+    order: 2;
+    margin-top: -0.5rem;
   }
 
   .freebie-preview embed,
