@@ -231,6 +231,31 @@ footer {
   max-width: 500px;
 }
 
+/* Responsive behavior on small screens */
+@media (max-width: 768px) {
+  .freebie-resource {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .freebie-description,
+  .freebie-preview {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .freebie-preview embed,
+  .freebie-preview img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .freebie-description a {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
+
 .no-break {
   white-space: nowrap;
 }
