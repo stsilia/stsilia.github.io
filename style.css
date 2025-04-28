@@ -520,41 +520,38 @@ footer {
 
 .smo-flex-wrapper {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start; /* key for top-alignment with first paragraph */
-  margin-top: 0;
   flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
 }
 
 .smo-text {
   flex: 1 1 60%;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .smo-image {
   flex: 1 1 35%;
-  max-width: 400px;
-  min-width: 250px;
-  text-align: left;
-  align-self: flex-start;
+  min-width: 220px;
+  text-align: center;
 }
 
 .smo-image img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
   border-radius: 6px;
-  display: block;
-  margin: 0 auto;
+  height: auto;
 }
 
 .image-caption {
   font-size: 0.9rem;
   color: #aab8d1;
   margin-top: 0.5rem;
+  text-align: center;
   line-height: 1.4;
 }
 
-/* Responsive */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .smo-flex-wrapper {
     flex-direction: column;
