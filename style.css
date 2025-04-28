@@ -269,6 +269,7 @@ footer {
     height: auto !important;
     margin: 0 auto;
     display: block;
+    line-height: 0;
   }
 
   .freebie-description a {
