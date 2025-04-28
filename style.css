@@ -230,6 +230,15 @@ footer {
 .freebie-preview {
   flex: 1 1 400px;
   max-width: 500px;
+  margin-bottom: 0;
+}
+
+.freebie-resource + .freebie-resource {
+  margin-top: 2rem; /* consistent space between freebies */
+}
+
+.freebie-resource:last-child {
+  margin-bottom: 0; /* optional: avoid bottom gap if desired */
 }
 
 @media (max-width: 768px) {
