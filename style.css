@@ -245,18 +245,16 @@ footer {
   .freebie-resource {
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem; /* slightly less spacing if too much */
+    margin-bottom: 2.5rem;
   }
 
   .freebie-description,
   .freebie-preview {
     max-width: 100%;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
   }
 
-  /* Force description above preview on mobile */
   .freebie-description {
     order: 1;
   }
@@ -267,13 +265,19 @@ footer {
 
   .freebie-preview embed,
   .freebie-preview img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
   }
 
   .freebie-description a {
     display: inline-block;
     margin-bottom: 1rem;
+  }
+
+  .freebie-description h3 {
+    margin-top: 0;
   }
 }
 
