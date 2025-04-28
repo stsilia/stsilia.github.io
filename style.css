@@ -256,8 +256,8 @@ footer {
 
   .freebie-preview embed,
   .freebie-preview img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100%;
+    height: auto;
   }
 
   .freebie-description a {
