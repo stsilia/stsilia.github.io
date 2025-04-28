@@ -536,6 +536,7 @@ footer {
   max-width: 400px;
   min-width: 250px;
   text-align: center;
+  align-self: flex-start;
 }
 
 .smo-image img {
