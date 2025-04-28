@@ -232,6 +232,8 @@ footer {
   max-width: 500px;
   margin: 0; /* ensure no default margin sneaks in */
   padding: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
 .freebie-preview embed,
@@ -241,6 +243,8 @@ footer {
   padding: 0;
   line-height: 0;
   border: none;
+  vertical-align: top;
+  background-color: transparent;
 }
 
 .freebie-resource + .freebie-resource {
