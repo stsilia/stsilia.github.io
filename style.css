@@ -198,45 +198,58 @@ footer {
   max-width: 600px; /* optional: keeps it from stretching too wide */
 }
 
+/* === Freebie Section === */
 .freebie-resource {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
-  align-items: center;
   margin-top: 3rem;
 }
 
 .freebie-description {
   flex: 1 1 300px;
-  max-width: 400px;
+  max-width: 500px;
+  min-width: 300px;
   text-align: left;
 }
 
 .freebie-description h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: #FFFFFF;
+  margin-top: 0; /* Ensures no extra gap */
+  color: #ffffff;
 }
 
-.freebie-description {
-  flex: 1 1 300px;
-  max-width: 500px;
-  min-width: 300px; 
-  text-align: left;
+.freebie-description p {
+  margin-bottom: 1rem;
+}
+
+.freebie-description a {
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .freebie-preview {
-  flex: 1 1 400px;
+  flex: 1 1 300px;
   max-width: 500px;
+  align-self: flex-start; /* Aligns preview with title top */
 }
 
+.freebie-preview embed,
+.freebie-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Responsive behavior === */
 @media (max-width: 768px) {
   .freebie-resource {
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
   .freebie-description,
@@ -245,7 +258,6 @@ footer {
     text-align: center;
   }
 
-  /* Force description above preview on mobile */
   .freebie-description {
     order: 1;
   }
@@ -254,16 +266,21 @@ footer {
     order: 2;
   }
 
+  .freebie-description a {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
   .freebie-preview embed,
   .freebie-preview img {
     width: 100% !important;
     height: auto !important;
   }
+}
 
-  .freebie-description a {
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
+/* Optional: reduce space below previews globally for tighter layout */
+.freebie-resource + .freebie-resource {
+  margin-top: 3rem;
 }
 
 .no-break {
