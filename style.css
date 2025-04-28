@@ -204,6 +204,7 @@ footer {
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
+  align-items: center;
   margin-top: 3rem;
 }
 
@@ -235,7 +236,7 @@ footer {
   .freebie-resource {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem; /* ensures consistent spacing between freebies */
+    margin-bottom: 1rem; /* ensures consistent spacing between freebies */
   }
 
   .freebie-description,
@@ -252,7 +253,7 @@ footer {
   .freebie-preview {
     order: 2; /* makes sure preview comes after description/download */
     margin-top: -0.5rem; /* adjusts gap if needed */
-    margin-bottom: 2rem; /* consistent space before the next freebie */
+    margin-bottom: 1rem; /* consistent space before the next freebie */
   }
 
   .freebie-preview embed,
