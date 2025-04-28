@@ -230,7 +230,17 @@ footer {
 .freebie-preview {
   flex: 1 1 400px;
   max-width: 500px;
-  margin-bottom: 0;
+  margin: 0; /* ensure no default margin sneaks in */
+  padding: 0;
+}
+
+.freebie-preview embed,
+.freebie-preview img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+  border: none;
 }
 
 .freebie-resource + .freebie-resource {
