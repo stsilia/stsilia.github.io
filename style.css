@@ -515,13 +515,14 @@ footer {
 .left-aligned-section p {
   color: #e0e6ed;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 .smo-flex-wrapper {
   display: flex;
   gap: 2rem;
   align-items: flex-start; /* key for top-alignment with first paragraph */
-  margin-top: 1rem;
+  margin-top: 0;
   flex-wrap: wrap;
 }
 
