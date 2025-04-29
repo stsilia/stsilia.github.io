@@ -465,6 +465,11 @@ footer {
   margin-top: 2.5rem; /* creates consistent spacing between sections */
 }
 
+.outreach-section p {
+  text-align: justify;
+  text-align-last: left;
+}
+
 .cv-section {
   text-align: left;
   max-width: 700px;
