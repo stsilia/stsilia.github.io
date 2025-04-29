@@ -465,7 +465,7 @@ footer {
   margin-top: 2.5rem; /* creates consistent spacing between sections */
 }
 
-.outreach-section p {
+.outreach-section .logo-inline-wrapper p {
   text-align: justify;
   text-align-last: left;
 }
