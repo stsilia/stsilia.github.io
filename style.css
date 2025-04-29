@@ -10,14 +10,16 @@ body {
 
 /* Hero Section */
 .hero {
+  position: relative;
   padding: 3rem 1rem 1rem;
   background-image: url('assets/Euclid_s_extragalactic_view_in_Southern_Sky_patch_cropped.jpeg');
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover; /* Ensures full width and fills section */
-  background-attachment: scroll;
-  width: 100vw; /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Remove body padding for full bleed */
+  background-position: center bottom;
+  background-size: cover;
+  background-color: #0d1b2a; /* fallback for image edges */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .hero-photo {
