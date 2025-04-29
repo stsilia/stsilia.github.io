@@ -11,6 +11,11 @@ body {
 /* Hero Section */
 .hero {
   padding: 3rem 1rem 1rem;
+  background-image: url('assets/Euclid_s_extragalactic_view_in_Southern_Sky_patch.tif');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto; /* Do not resize */
+  background-attachment: scroll;
 }
 
 .hero-photo {
