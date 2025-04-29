@@ -485,7 +485,8 @@ footer {
 
 .cv-section h3 {
   font-family: 'Merriweather', serif;
-  border-left: 4px solid #73baf7;
+  background-color: #d0e8ff; /* light blue */
+  color: #0d1b2a;            /* navy */
   padding-left: 1rem;
   font-size: 1.3rem;
   color: #ffffff;
