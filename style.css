@@ -143,7 +143,7 @@ footer {
 }
 
 footer::after {
-  content: "Background image credit: ESA/Euclid/Euclid Consortium/NASA, CEA Paris-Saclay";
+  content: "Background image credit: ESA/Euclid/Euclid Consortium/NASA, CEA Paris-Saclay, processed by J.-C. Cuillandre, E. Bertin, G. Anselmi";
   display: block;
   font-size: 0.8rem;
   color: #aab8d1;
