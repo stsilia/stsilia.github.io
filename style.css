@@ -11,7 +11,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  padding: 3rem 1rem 1rem;
+  padding: 3rem 0 1rem;
   background-image: url('assets/Euclid_s_extragalactic_view_in_Southern_Sky_patch_cropped.jpeg');
   background-repeat: no-repeat;
   background-position: center bottom;
