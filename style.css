@@ -142,6 +142,14 @@ footer {
   font-size: 0.9rem;
 }
 
+footer::after {
+  content: "Background image credit: ESA/Euclid/Euclid Consortium/NASA, CEA Paris-Saclay";
+  display: block;
+  font-size: 0.8rem;
+  color: #aab8d1;
+  margin-top: 0.5rem;
+  text-align: center;
+}
 
 #page-content {
   opacity: 0;
