@@ -11,6 +11,8 @@ body {
 }
 
 /* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 .hero {
   position: relative;
   padding: 3rem 0 1rem;
@@ -34,6 +36,7 @@ body {
 }
 
 .hero h1 {
+  font-family: 'Audiowide', cursive;
   margin: 0.5rem 0 0;
   font-size: 1.8rem;
   color: #ffffff;
