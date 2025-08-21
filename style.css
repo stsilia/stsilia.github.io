@@ -1,7 +1,9 @@
 /* General Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Nunito', sans-serif; /* previously 'Georgia', serif */
   background-color: #190021ff; /* Deep navy #0d1b2a */
   color: #e0e6ed;
   text-align: center;
