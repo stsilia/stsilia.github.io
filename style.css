@@ -36,7 +36,14 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Audiowide', fantasy;
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 400;              /* no faux bold */
+  letter-spacing: 0.02em;        /* tiny tracking often helps */
+  line-height: 1.1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
   margin: 0.5rem 0 0;
   font-size: 1.8rem;
   color: #ffffff;
